@@ -90,7 +90,7 @@
 
   .hero{padding:72px 0 64px;position:relative;overflow:hidden}
   .hero::before{content:"";position:absolute;top:-180px;right:-180px;width:520px;height:520px;background:radial-gradient(circle,rgba(73,24,182,.14),transparent 65%);pointer-events:none}
-  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center;position:relative;z-index:1}
+  .hero-grid{display:grid;grid-template-columns:minmax(0,640px);gap:56px;align-items:center;position:relative;z-index:1}
   @media(max-width:960px){.hero-grid{grid-template-columns:1fr}}
   .hero h1{font-size:clamp(36px,5.2vw,58px);font-weight:400}
   .hero p.lead{font-size:19px;color:var(--n800);margin:22px 0 30px;max-width:540px}
@@ -100,8 +100,13 @@
   .star-f{width:16px;height:16px;fill:var(--p400);color:var(--p400)}
 
   /* home hero visual: dashboard + phone */
-  .hero-visual{position:relative}
+  .hero-visual{position:absolute;top:0;bottom:0;right:-5vw;width:42vw;max-width:880px;display:flex;align-items:center;z-index:0}
   .hero-visual img{width:100%;height:auto;display:block;border-radius:20px}
+  .hero-grid>div:first-child{position:relative;z-index:1}
+  @media(max-width:1100px){
+    .hero-grid{grid-template-columns:1fr}
+    .hero-visual{position:static;width:100%;max-width:640px;margin:36px auto 0}
+  }
 
   /* dark hero (home) */
   .hero-dark{background:radial-gradient(900px 480px at 85% 10%,#241B3F,var(--n900)),var(--n900);color:#fff}
@@ -117,9 +122,7 @@
   .hero-stats .hs .n{font-weight:700;font-size:clamp(38px,4vw,54px);letter-spacing:-.02em;font-variant-numeric:tabular-nums}
   .hero-stats .hs .n em{font-style:normal;color:var(--p300)}
   .hero-stats .hs p{font-size:14.5px;color:var(--n400)}
-  .hero-visual{position:relative;display:flex;justify-content:center;align-items:center}
-  .hero-visual::before{content:"";position:absolute;inset:-30px;background:radial-gradient(50% 50% at 50% 50%,rgba(164,152,236,.28),transparent 70%);pointer-events:none}
-  .hero-visual img{position:relative;z-index:1;width:100%;max-width:540px;height:auto;display:block}
+  /* (hero visual positioning defined above) */
 
   .impact{background:var(--n900);color:#fff;border-radius:26px;padding:38px 36px;box-shadow:var(--shadow);position:relative;overflow:hidden}
   .impact::after{content:"";position:absolute;right:-90px;top:-90px;width:280px;height:280px;background:radial-gradient(circle,rgba(164,152,236,.35),transparent 70%)}
