@@ -193,12 +193,10 @@
   .ph-16x9{aspect-ratio:21/9;max-height:300px}
   .ph-4x3{aspect-ratio:4/3}
   img.ph-img{width:100%;height:100%;object-fit:cover;border-radius:18px;display:block}
-  /* wireframe visuals: numbers + icon chips render as image blocks until photos arrive */
-  .step3 .n,.card .ci,.w-card .ci{width:100%;background:var(--n200);border:2px dashed var(--n500);border-radius:14px;margin:0 0 16px;font-size:0;display:flex;align-items:center;justify-content:center}
-  .step3 .n{height:140px}
-  .card .ci,.w-card .ci{height:150px}
-  .step3 .n svg,.card .ci svg,.w-card .ci svg{display:none}
-  .step3 .n::after,.card .ci::after,.w-card .ci::after{content:"Your image here";font-size:13px;font-weight:600;color:var(--n600)}
+  /* wireframe visuals: flow steps render as image blocks until photos arrive */
+  .step3 .n{width:100%;height:140px;background:var(--n200);border:2px dashed var(--n500);border-radius:14px;margin:0 0 16px;font-size:0;display:flex;align-items:center;justify-content:center}
+  .step3 .n svg{display:none}
+  .step3 .n::after{content:"Your image here";font-size:13px;font-weight:600;color:var(--n600)}
 </style>
 </head>
 <body>
