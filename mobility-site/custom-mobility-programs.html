@@ -60,6 +60,20 @@
   .btn-sm{padding:11px 22px;font-size:14px}
   .burger{display:none;background:none;border:none;font-size:26px;cursor:pointer;color:var(--n900)}
   .burger svg{width:26px;height:26px}
+  .nav-drop.wide{min-width:640px}
+  .drop-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px}
+  .nav-drop a{position:relative;padding-right:38px}
+  .nav-drop a:hover .drop-ico{background:var(--p400);color:#fff}
+  .drop-ico{transition:background .18s ease,color .18s ease}
+  .nav-drop a::after{content:"→";position:absolute;right:14px;top:50%;transform:translateY(-50%);font-weight:600;color:var(--p400);opacity:0;transition:opacity .18s ease}
+  .nav-drop a:hover::after{opacity:1}
+  .nav-drop a.active{background:var(--p100)}
+  @media(max-width:1100px){
+    .nav-drop.wide{min-width:0}
+    .drop-grid{display:block}
+    .nav-drop a{padding-right:14px}
+    .nav-drop a::after{display:none}
+  }
   @media(max-width:900px){
     .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:var(--n50);flex-direction:column;padding:20px;border-bottom:1px solid var(--n300)}
     .nav-links.open{display:flex}
@@ -197,7 +211,8 @@
       </div>
       <div class="nav-item">
         <button class="nav-link nav-parent" aria-expanded="false" aria-haspopup="true">Admin experiences <i data-lucide="chevron-down" class="chev"></i></button>
-        <div class="nav-drop">
+        <div class="nav-drop wide">
+          <div class="drop-grid">
           <a href="custom-mobility-programs.html" class="active">
             <span class="drop-ico"><i data-lucide="sliders-horizontal"></i></span>
             <span><strong>Custom mobility programs</strong><small>Budgets per group, under your policy</small></span>
@@ -222,6 +237,7 @@
             <span class="drop-ico"><i data-lucide="sparkles"></i></span>
             <span><strong>Agent insights</strong><small>Your 24/7 mobility data team</small></span>
           </a>
+          </div>
         </div>
       </div>
       <a href="https://skiprnext.zendesk.com/hc/en-us" target="_blank" rel="noopener">Help center</a>
