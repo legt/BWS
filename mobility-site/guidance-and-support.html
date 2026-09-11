@@ -175,6 +175,12 @@
   .ph-16x9{aspect-ratio:21/9;max-height:300px}
   .ph-4x3{aspect-ratio:4/3}
   img.ph-img{width:100%;height:100%;object-fit:cover;border-radius:18px;display:block}
+  /* wireframe visuals: numbers + icon chips render as image blocks until photos arrive */
+  .step4 .n,.card .ci{width:100%;background:var(--n200);border:2px dashed var(--n500);border-radius:14px;margin:0 0 16px;font-size:0;display:flex;align-items:center;justify-content:center}
+  .step4 .n{height:130px}
+  .card .ci{height:150px}
+  .step4 .n svg,.card .ci svg{display:none}
+  .step4 .n::after,.card .ci::after{content:"Your image here";font-size:13px;font-weight:600;color:var(--n600)}
 </style>
 </head>
 <body>
@@ -265,8 +271,6 @@
     <span class="eyebrow">Exceptional support, proven results</span>
     <h2 class="section-title">Guidance at every level</h2>
     <p class="section-sub">Recognized by large corporations, our support team pairs a 95% satisfaction score with countless positive testimonials.</p>
-    <!-- PHOTO SLOT: support team, replace div with <img class="ph-img" src="..."> -->
-    <div class="ph ph-16x9 reveal"><i data-lucide="image"></i><span>Your photo here · support team (21:9)</span></div>
     <div class="cards3">
       <div class="card reveal"><div class="ci"><i data-lucide="briefcase"></i></div><h3>Comprehensive HR support</h3><p>We help define programs, activate the right options for the right groups, and stay 100% compliant with your policy. Communication docs included for smooth implementation.</p></div>
       <div class="card reveal"><div class="ci"><i data-lucide="users"></i></div><h3>Dedicated workforce support</h3><p>Employees get the help they need, when they need it. Admin and end-user trainings organised at your convenience for a successful transition.</p></div>
