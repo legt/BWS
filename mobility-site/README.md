@@ -1,6 +1,6 @@
 # Skipr mobility site (static)
 
-Three standalone landing pages, no build step. Deploy the `mobility-site/`
+Four standalone landing pages, no build step. Deploy the `mobility-site/`
 folder as a static project (e.g. a dedicated Vercel project with its
 **Root Directory** set to `mobility-site/`).
 
@@ -8,7 +8,8 @@ folder as a static project (e.g. a dedicated Vercel project with its
 
 | File | Page |
 | ---- | ---- |
-| `skipr-mobility-budget.html` | Federal mobility budget (landing, served at `/`) |
+| `index.html` | Home (served at `/`) |
+| `skipr-mobility-budget.html` | Federal mobility budget |
 | `my-mobility-program.html` | User experiences, My mobility program |
 | `my-payment-methods.html` | User experiences, My payment methods |
 
