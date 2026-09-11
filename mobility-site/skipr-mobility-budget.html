@@ -144,7 +144,8 @@
   .logos{padding:34px 0;border-top:1px solid var(--n300);border-bottom:1px solid var(--n300);background:var(--n50)}
   .logos p{text-align:center;font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--n600);margin-bottom:18px}
   .logo-row{display:flex;justify-content:center;gap:48px;flex-wrap:wrap;align-items:center}
-  .logo-row span{font-weight:600;font-size:22px;color:rgba(23,25,36,.45);letter-spacing:-.02em}
+  .logo-row img{height:30px;width:auto;filter:grayscale(1);opacity:.55;transition:filter .2s ease,opacity .2s ease}
+  .logo-row img:hover{filter:none;opacity:1}
 
   /* ---------- deadline cards ---------- */
   .deadline-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:36px}
@@ -429,7 +430,7 @@
 <div class="logos">
   <div class="wrap">
     <p>Trusted by 200+ companies to manage their corporate mobility</p>
-    <div class="logo-row"><span>Carrefour</span><span>accenture</span><span>LUMINUS</span><span>PTC</span><span>Pluxee Group</span></div>
+    <div class="logo-row"><img src="logos/carrefour.svg" alt="Carrefour"><img src="logos/accenture.svg" alt="Accenture"><img src="logos/luminus.svg" alt="Luminus"><img src="logos/ptc.png" alt="Positive Thinking Company"><img src="logos/pluxee.svg" alt="Pluxee Group"></div>
   </div>
 </div>
 

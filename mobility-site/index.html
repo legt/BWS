@@ -120,7 +120,8 @@
   .logos{padding:34px 0;border-top:1px solid var(--n300);border-bottom:1px solid var(--n300);background:var(--n50)}
   .logos p{text-align:center;font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--n600);margin-bottom:18px}
   .logo-row{display:flex;justify-content:center;gap:48px;flex-wrap:wrap;align-items:center}
-  .logo-row span{font-weight:600;font-size:22px;color:rgba(23,25,36,.45);letter-spacing:-.02em}
+  .logo-row img{height:30px;width:auto;filter:grayscale(1);opacity:.55;transition:filter .2s ease,opacity .2s ease}
+  .logo-row img:hover{filter:none;opacity:1}
 
   .cards3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:36px}
   @media(max-width:900px){.cards3{grid-template-columns:1fr}}
@@ -244,7 +245,7 @@
 <div class="logos">
   <div class="wrap">
     <p>Industry leaders choose Skipr to manage their mobility</p>
-    <div class="logo-row"><span>Carrefour</span><span>Delhaize</span><span>Deloitte</span><span>SAP</span><span>accenture</span></div>
+    <div class="logo-row"><img src="logos/carrefour.svg" alt="Carrefour"><img src="logos/delhaize.svg" alt="Delhaize"><img src="logos/deloitte.svg" alt="Deloitte"><img src="logos/sap.svg" alt="SAP"><img src="logos/accenture.svg" alt="Accenture"></div>
   </div>
 </div>
 
