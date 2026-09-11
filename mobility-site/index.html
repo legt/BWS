@@ -88,45 +88,8 @@
   .star-f{width:16px;height:16px;fill:var(--p400);color:var(--p400)}
 
   /* home hero visual: dashboard + phone */
-  .hero-visual{position:relative;margin-bottom:56px}
-  .hv-glow{position:absolute;inset:-50px;background:radial-gradient(45% 45% at 60% 40%,rgba(164,152,236,.3),transparent 70%);pointer-events:none}
-  .hv-dash{position:relative;z-index:1;background:#fff;border:1px solid var(--n300);border-radius:22px;box-shadow:var(--shadow);padding:20px 22px;margin-left:52px}
-  .hv-top{display:flex;align-items:center;gap:8px;margin-bottom:10px;flex-wrap:wrap}
-  .hv-logo{background:var(--p400);color:#fff;font-weight:600;font-size:12px;padding:4px 10px;border-radius:8px}
-  .hv-tab{font-size:11.5px;font-weight:500;color:var(--n600);background:var(--n100);border:1px solid var(--n300);padding:4px 11px;border-radius:100px;white-space:nowrap}
-  .hv-dash h4{font-size:15px;margin:2px 0 4px}
-  .hv-chart{position:relative}
-  .hv-chart svg{width:100%;height:auto;display:block}
-  .hv-tip{position:absolute;left:32%;top:-6px;background:#fff;border:1px solid var(--n300);border-radius:10px;box-shadow:var(--shadow);padding:8px 12px;font-size:11.5px;line-height:1.4;white-space:nowrap}
-  .hv-tip span{color:var(--n600)}
-  .hv-tip strong{display:block;font-size:15px}
-  .hv-tip em{font-style:normal;color:var(--n600)}
-  .hv-tip em i{font-style:normal;background:var(--p100);color:var(--p500);font-weight:600;border-radius:5px;padding:0 6px;margin-right:5px}
-  .hv-spend{margin-top:10px;border:1px solid var(--n300);border-radius:12px;padding:11px 13px}
-  .hv-spend h5{font-size:12px;margin-bottom:4px}
-  .hv-spend ul{list-style:none;font-size:12px}
-  .hv-spend li{display:flex;padding:3px 0;color:var(--n800)}
-  .hv-spend li span{margin-left:auto;font-weight:600;color:var(--n600);font-variant-numeric:tabular-nums}
-  .hv-phone{position:absolute;left:-4px;bottom:-48px;width:248px;background:#fff;border:1px solid var(--n300);border-radius:24px;box-shadow:var(--shadow);padding:18px;z-index:2}
-  .hv-phone h4{font-size:16px}
-  .hv-bal{font-size:21px;font-weight:700;margin-top:2px;letter-spacing:-.01em}
-  .hv-sub{font-size:11px;color:var(--n600);margin-bottom:8px}
-  .hv-bar{height:8px;background:var(--n200);border-radius:99px;overflow:hidden;margin-bottom:8px}
-  .hv-bar i{display:block;height:100%;width:44%;background:var(--p400);border-radius:99px}
-  .hv-kv{display:flex;justify-content:space-between;font-size:11.5px;color:var(--n600);padding:2px 0}
-  .hv-kv b{color:var(--n900);font-variant-numeric:tabular-nums}
-  .hv-plan{display:flex;justify-content:space-between;font-size:11.5px;margin-top:8px;color:var(--n600)}
-  .hv-plan b{color:var(--n900);font-variant-numeric:tabular-nums}
-  @media(max-width:960px){
-    .hero-visual{margin-bottom:0}
-    .hv-dash{margin-left:0}
-    .hv-phone{position:static;width:100%;margin-top:14px}
-    .hv-tip{left:auto;right:2%;top:-10px}
-  }
-  .stat-strip{border-top:1px solid var(--n300);border-bottom:1px solid var(--n300);background:#fff;padding:22px 0}
-  .stat-strip .wrap{display:flex;gap:20px;align-items:center;justify-content:center;flex-wrap:wrap;font-size:15px;color:var(--n600)}
-  .stat-strip strong{font-size:22px;color:var(--n900);font-weight:700;letter-spacing:-.01em;margin-right:6px}
-  .stat-strip .div{width:1px;height:26px;background:var(--n300)}
+  .hero-visual{position:relative}
+  .hero-visual img{width:100%;height:auto;display:block;border-radius:20px;box-shadow:var(--shadow)}
 
   /* dark hero (home) */
   .hero-dark{background:radial-gradient(900px 480px at 85% 10%,#241B3F,var(--n900)),var(--n900);color:#fff}
@@ -275,53 +238,7 @@
       <div class="hero-proof"><span class="stars"><i data-lucide="star" class="star-f"></i><i data-lucide="star" class="star-f"></i><i data-lucide="star" class="star-f"></i><i data-lucide="star" class="star-f"></i><i data-lucide="star" class="star-f"></i></span> Trusted by 200+ companies · Part of the Pluxee Group</div>
     </div>
     <div class="hero-visual reveal">
-      <div class="hv-glow"></div>
-      <div class="hv-dash">
-        <div class="hv-top"><span class="hv-logo">skipr</span><span class="hv-tab">Insights</span><span class="hv-tab">Spending this month</span></div>
-        <h4>Total Expenses by Service</h4>
-        <div class="hv-chart">
-          <svg viewBox="0 0 560 240" role="img" aria-label="Total expenses by service chart">
-            <defs>
-              <linearGradient id="ag" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0" stop-color="#4918B6" stop-opacity=".22"/>
-                <stop offset="1" stop-color="#4918B6" stop-opacity="0"/>
-              </linearGradient>
-            </defs>
-            <g stroke="#E6E8F0" stroke-width="1">
-              <line x1="34" y1="42" x2="540" y2="42"/>
-              <line x1="34" y1="87" x2="540" y2="87"/>
-              <line x1="34" y1="132" x2="540" y2="132"/>
-              <line x1="34" y1="177" x2="540" y2="177"/>
-              <line x1="34" y1="210" x2="540" y2="210"/>
-            </g>
-            <g fill="#656B8E" font-size="11" font-family="Inter,sans-serif">
-              <text x="0" y="46">80k</text><text x="0" y="91">60k</text><text x="0" y="136">40k</text><text x="0" y="181">20k</text>
-              <text x="34" y="228">Jan</text><text x="77" y="228">Feb</text><text x="118" y="228">Mar</text><text x="161" y="228">Apr</text><text x="200" y="228">May</text><text x="243" y="228">Jun</text><text x="288" y="228">Jul</text><text x="331" y="228">Aug</text><text x="374" y="228">Sep</text><text x="417" y="228">Oct</text><text x="458" y="228">Nov</text><text x="501" y="228">Dec</text>
-            </g>
-            <path d="M34,178 L77,166 L120,140 L163,112 L206,72 L249,100 L292,148 L335,158 L378,144 L421,112 L464,80 L507,62 L540,58 L540,210 L34,210 Z" fill="url(#ag)"/>
-            <path d="M34,178 L77,166 L120,140 L163,112 L206,72 L249,100 L292,148 L335,158 L378,144 L421,112 L464,80 L507,62 L540,58" fill="none" stroke="#3E1599" stroke-width="2.5" stroke-dasharray="2 5" stroke-linecap="round"/>
-            <circle cx="206" cy="72" r="5" fill="#4918B6" stroke="#fff" stroke-width="2"/>
-          </svg>
-          <div class="hv-tip"><span>May 2025</span><strong>€ 57,000.00</strong><em><i>+15%</i>from previous month</em></div>
-        </div>
-        <div class="hv-spend">
-          <h5>Top spenders this quarter</h5>
-          <ul>
-            <li>John Doe <span>12,345.92€</span></li>
-            <li>Alex Turner <span>9,523.51€</span></li>
-            <li>Mia Johnson <span>6,876.65€</span></li>
-          </ul>
-        </div>
-      </div>
-      <div class="hv-phone">
-        <h4>Transactions</h4>
-        <div class="hv-bal">212.00€</div>
-        <div class="hv-sub">Budget available · Federal mobility budget</div>
-        <div class="hv-bar"><i></i></div>
-        <div class="hv-kv"><span>Spent</span><b>200.00€</b></div>
-        <div class="hv-kv"><span>Reserved</span><b>395.00€</b></div>
-        <div class="hv-plan"><span>SNCB · 01/01/2025</span><b>-1000.00€</b></div>
-      </div>
+      <img src="hero_dashboard.png" alt="Skipr Insights dashboard and Transactions app">
     </div>
   </div>
 </section>
