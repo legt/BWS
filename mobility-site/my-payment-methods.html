@@ -185,6 +185,13 @@
 
   .reveal{opacity:0;transform:translateY(26px);transition:opacity .6s ease,transform .6s ease}
   .reveal.visible{opacity:1;transform:none}
+
+  /* photo slots: replace a .ph div with <img class="ph-img" src="your-photo.jpg" alt="..."> */
+  .ph{background:var(--n200);border:2px dashed var(--n500);border-radius:18px;display:flex;flex-direction:column;gap:10px;align-items:center;justify-content:center;color:var(--n600);font-size:14px;font-weight:500;min-height:200px;margin-bottom:20px}
+  .ph svg{width:32px;height:32px}
+  .ph-16x9{aspect-ratio:16/9}
+  .ph-4x3{aspect-ratio:4/3}
+  img.ph-img{width:100%;height:100%;object-fit:cover;border-radius:18px;display:block}
 </style>
 </head>
 <body>
@@ -301,6 +308,8 @@
     <span class="eyebrow">The Skipr app</span>
     <h2 class="section-title">Your mobility hub</h2>
     <p class="section-sub">Optimise your mobility benefit from your pocket. Pay on the go, manage allowances and services, all in one click.</p>
+    <!-- PHOTO SLOT: lifestyle payment moment, replace div with <img class="ph-img" src="..."> -->
+    <div class="ph ph-16x9 reveal"><i data-lucide="image"></i><span>Your photo here · paying on the go (16:9)</span></div>
     <div class="feat-grid">
       <div class="feat reveal"><div class="fi"><i data-lucide="smartphone"></i></div><h4>Pay on the go</h4><p>Physical and virtual card details always at hand, right in the app.</p></div>
       <div class="feat reveal"><div class="fi"><i data-lucide="milestone"></i></div><h4>Log mileage</h4><p>Record bike, car and shared trips in seconds, allowances calculated for you.</p></div>

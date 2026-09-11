@@ -378,6 +378,13 @@
   /* reveal on scroll */
   .reveal{opacity:0;transform:translateY(26px);transition:opacity .6s ease,transform .6s ease}
   .reveal.visible{opacity:1;transform:none}
+
+  /* photo slots: replace a .ph div with <img class="ph-img" src="your-photo.jpg" alt="..."> */
+  .ph{background:var(--n200);border:2px dashed var(--n500);border-radius:18px;display:flex;flex-direction:column;gap:10px;align-items:center;justify-content:center;color:var(--n600);font-size:14px;font-weight:500;min-height:200px;margin-bottom:20px}
+  .ph svg{width:32px;height:32px}
+  .ph-16x9{aspect-ratio:16/9}
+  .ph-4x3{aspect-ratio:4/3}
+  img.ph-img{width:100%;height:100%;object-fit:cover;border-radius:18px;display:block}
 </style>
 </head>
 <body>
@@ -668,11 +675,11 @@
     <span class="eyebrow teal">In real life</span>
     <h2 class="section-title">Three employees, three uses, one platform</h2>
     <div class="persona-grid">
-      <div class="persona reveal"><div class="avatar">O</div><h3>Olivia</h3><div class="dist">0 to 5 km</div><p>Walks or takes the tram to the office, but wants a car for holidays.</p><div class="p-budget">€850 <small>/ month</small></div>
+      <div class="persona reveal"><!-- PHOTO SLOT: replace div with <img class="ph-img" src="..."> --><div class="ph ph-4x3"><i data-lucide="image"></i><span>Olivia · commuter portrait (4:3)</span></div><div class="avatar">O</div><h3>Olivia</h3><div class="dist">0 to 5 km</div><p>Walks or takes the tram to the office, but wants a car for holidays.</p><div class="p-budget">€850 <small>/ month</small></div>
         <ul><li>Housing costs <b>€500</b></li><li>Car rental + cash <b>€300</b></li><li>Transport pass <b>€50</b></li></ul></div>
-      <div class="persona reveal"><div class="avatar">A</div><h3>Arthur</h3><div class="dist">15 to 30 km</div><p>Lives outside Brussels, combines bike + train, saves 20 min a day.</p><div class="p-budget">€700 <small>/ month</small></div>
+      <div class="persona reveal"><!-- PHOTO SLOT: replace div with <img class="ph-img" src="..."> --><div class="ph ph-4x3"><i data-lucide="image"></i><span>Arthur · bike plus train (4:3)</span></div><div class="avatar">A</div><h3>Arthur</h3><div class="dist">15 to 30 km</div><p>Lives outside Brussels, combines bike + train, saves 20 min a day.</p><div class="p-budget">€700 <small>/ month</small></div>
         <ul><li>Housing costs <b>€450</b></li><li>Car rental + cash <b>€200</b></li><li>Transport pass <b>€50</b></li></ul></div>
-      <div class="persona reveal"><div class="avatar">E</div><h3>Emma</h3><div class="dist">50 to 100 km</div><p>Consultant, home 12 days a month, travels to client sites.</p><div class="p-budget">€600 <small>/ month</small></div>
+      <div class="persona reveal"><!-- PHOTO SLOT: replace div with <img class="ph-img" src="..."> --><div class="ph ph-4x3"><i data-lucide="image"></i><span>Emma · consultant on the move (4:3)</span></div><div class="avatar">E</div><h3>Emma</h3><div class="dist">50 to 100 km</div><p>Consultant, home 12 days a month, travels to client sites.</p><div class="p-budget">€600 <small>/ month</small></div>
         <ul><li>Housing costs <b>€150</b></li><li>Car rental + cash <b>€50</b></li><li>Transport pass <b>€400</b></li></ul></div>
     </div>
   </div>

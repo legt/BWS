@@ -184,6 +184,13 @@
 
   .reveal{opacity:0;transform:translateY(26px);transition:opacity .6s ease,transform .6s ease}
   .reveal.visible{opacity:1;transform:none}
+
+  /* photo slots: replace a .ph div with <img class="ph-img" src="your-photo.jpg" alt="..."> */
+  .ph{background:var(--n200);border:2px dashed var(--n500);border-radius:18px;display:flex;flex-direction:column;gap:10px;align-items:center;justify-content:center;color:var(--n600);font-size:14px;font-weight:500;min-height:200px;margin-bottom:20px}
+  .ph svg{width:32px;height:32px}
+  .ph-16x9{aspect-ratio:16/9}
+  .ph-4x3{aspect-ratio:4/3}
+  img.ph-img{width:100%;height:100%;object-fit:cover;border-radius:18px;display:block}
 </style>
 </head>
 <body>
@@ -292,6 +299,8 @@
           <li class="reveal"><span class="ci"><i data-lucide="shield-check"></i></span><span><strong>Stronger security</strong><p>Centralised authentication hardens access across your organisation.</p></span></li>
         </ul>
       </div>
+      <!-- PHOTO SLOT: IT team, replace div with <img class="ph-img" src="..."> -->
+      <div class="ph ph-4x3 reveal"><i data-lucide="image"></i><span>Your photo here · IT team (4:3)</span></div>
       <div class="sso-panel reveal">
         <div class="big-ico"><i data-lucide="key-round"></i></div>
         <h3>SSO, enabled in days</h3>
