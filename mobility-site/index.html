@@ -69,6 +69,7 @@
     .nav-links.open{display:flex}
     .burger{display:block}
     .nav-cta .btn-ghost{display:none}
+    header.dark .nav-links{background:var(--n900);border-bottom:1px solid rgba(255,255,255,.1)}
     .nav-item{width:100%}
     .nav-parent{width:100%;justify-content:space-between}
     .nav-drop{position:static;transform:none;box-shadow:none;border:none;padding:4px 0 0 8px;min-width:0;display:none}
@@ -86,6 +87,34 @@
   .hero-proof{margin-top:26px;font-size:14px;color:var(--n600);display:flex;align-items:center;gap:10px}
   .stars{display:inline-flex;gap:3px;align-items:center}
   .star-f{width:16px;height:16px;fill:var(--p400);color:var(--p400)}
+
+  /* dark header + dark hero (home) */
+  header.dark{background:rgba(23,25,36,.94);border-bottom:1px solid rgba(255,255,255,.1)}
+  header.dark .nav-links a{color:var(--n300)}
+  header.dark .nav-links a:hover{color:#fff}
+  header.dark .nav-links a.active{color:var(--p300)}
+  header.dark .nav-link{color:var(--n300)}
+  header.dark .nav-link:hover{color:#fff}
+  header.dark .logo img{filter:brightness(0) invert(1)}
+  header.dark .btn-ghost{color:#fff;border-color:#fff}
+  header.dark .btn-primary{background:#fff;color:var(--n900)}
+  header.dark .burger{color:#fff}
+  .hero-dark{background:radial-gradient(900px 480px at 85% 10%,#241B3F,var(--n900)),var(--n900);color:#fff}
+  .hero-dark::before{background:radial-gradient(circle,rgba(164,152,236,.16),transparent 65%)}
+  .hero-dark h1{color:#fff}
+  .hero-dark .hl{background:linear-gradient(transparent 62%,var(--p400) 62%,var(--p400) 96%,transparent 96%)}
+  .hero-dark p.lead{color:var(--n400)}
+  .hero-dark .btn-ghost{color:#fff;border-color:#fff}
+  .hero-dark .hero-proof{color:var(--n400)}
+  .hero-dark .star-f{fill:var(--p300);color:var(--p300)}
+  .hero-stats{display:flex;gap:48px;margin:30px 0 34px;flex-wrap:wrap}
+  .hero-stats .hs small{display:block;font-size:14px;color:var(--n400);margin-bottom:2px}
+  .hero-stats .hs .n{font-weight:700;font-size:clamp(38px,4vw,54px);letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+  .hero-stats .hs .n em{font-style:normal;color:var(--p300)}
+  .hero-stats .hs p{font-size:14.5px;color:var(--n400)}
+  .hero-visual{position:relative;display:flex;justify-content:center;align-items:center}
+  .hero-visual::before{content:"";position:absolute;inset:-30px;background:radial-gradient(50% 50% at 50% 50%,rgba(164,152,236,.28),transparent 70%);pointer-events:none}
+  .hero-visual img{position:relative;z-index:1;width:100%;max-width:540px;height:auto;display:block;filter:drop-shadow(0 30px 60px rgba(0,0,0,.45))}
 
   .impact{background:var(--n900);color:#fff;border-radius:26px;padding:38px 36px;box-shadow:var(--shadow);position:relative;overflow:hidden}
   .impact::after{content:"";position:absolute;right:-90px;top:-90px;width:280px;height:280px;background:radial-gradient(circle,rgba(164,152,236,.35),transparent 70%)}
@@ -174,7 +203,7 @@
 </head>
 <body>
 
-<header>
+<header class="dark">
   <nav class="wrap">
     <a class="logo" href="index.html" aria-label="Skipr home"><img src="skipr-logo.svg" alt="Skipr"></a>
     <div class="nav-links" id="navLinks">
@@ -202,23 +231,23 @@
   </nav>
 </header>
 
-<section class="hero">
+<section class="hero hero-dark">
   <div class="wrap hero-grid">
     <div>
       <h1>The <span class="hl">all-in-one solution</span> for managing corporate mobility</h1>
       <p class="lead">Easily connect to and manage any mobility service. Implement a flexible and sustainable mobility policy with no administrative burden.</p>
+      <div class="hero-stats">
+        <div class="hs"><small>Per month</small><div class="n">2m<em>€</em></div><p>in sustainable mobility</p></div>
+        <div class="hs"><small>Up to</small><div class="n">6m <em>kg</em></div><p>CO₂ savings in a year</p></div>
+      </div>
       <div class="hero-ctas">
-        <a class="btn btn-primary" href="https://tally.so/r/w41pDd">Book a demo →</a>
+        <a class="btn btn-white" href="https://tally.so/r/w41pDd">Book a demo →</a>
         <a class="btn btn-ghost" href="https://tally.so/r/w41pDd">Get the free mobility guide</a>
       </div>
       <div class="hero-proof"><span class="stars"><i data-lucide="star" class="star-f"></i><i data-lucide="star" class="star-f"></i><i data-lucide="star" class="star-f"></i><i data-lucide="star" class="star-f"></i><i data-lucide="star" class="star-f"></i></span> Trusted by 200+ companies · Part of the Pluxee Group</div>
     </div>
-    <div class="reveal">
-      <div class="impact">
-        <div class="stat"><div class="num">2m€ <small>per month</small></div><p>in sustainable mobility flowing through Skipr</p></div>
-        <div class="stat"><div class="num">6m kg <small>up to</small></div><p>of CO₂ savings in a year for our clients combined</p></div>
-        <div class="impact-bars"><i style="height:38%"></i><i style="height:55%"></i><i style="height:44%"></i><i style="height:70%"></i><i style="height:62%"></i><i style="height:88%"></i><i style="height:100%"></i></div>
-      </div>
+    <div class="hero-visual reveal">
+      <img src="card.svg" alt="Skipr Mobility Card">
     </div>
   </div>
 </section>
