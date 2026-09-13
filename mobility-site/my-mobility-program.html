@@ -200,13 +200,6 @@
 
   .reveal{opacity:0;transform:translateY(26px);transition:opacity .6s ease,transform .6s ease}
   .reveal.visible{opacity:1;transform:none}
-
-  /* photo slots: replace a .ph div with <img class="ph-img" src="your-photo.jpg" alt="..."> */
-  .ph{background:var(--n200);border:2px dashed var(--n500);border-radius:18px;display:flex;flex-direction:column;gap:10px;align-items:center;justify-content:center;color:var(--n600);font-size:14px;font-weight:500;min-height:200px;margin-bottom:20px}
-  .ph svg{width:32px;height:32px}
-  .ph-16x9{aspect-ratio:21/9;max-height:300px}
-  .ph-4x3{aspect-ratio:4/3}
-  img.ph-img{width:100%;height:100%;object-fit:cover;border-radius:18px;display:block}
 </style>
 </head>
 <body>
@@ -325,16 +318,12 @@
           <li class="reveal"><span class="ci"><i data-lucide="receipt"></i></span><span><strong>Expenses in seconds</strong><p>Submit receipts, log mileage, claim reimbursements from the app or dashboard.</p></span></li>
         </ul>
       </div>
-      <div>
-      <!-- PHOTO SLOT: employee with phone, replace div with <img class="ph-img" src="..."> -->
-      <div class="ph ph-4x3 reveal"><i data-lucide="image"></i><span>Your photo here · app in hand (4:3)</span></div>
       <div class="mini-panel reveal">
         <h4>Recent transactions</h4>
         <div class="txn"><span class="t-ico"><i data-lucide="bike"></i></span><span>Bike maintenance<small>Yesterday <span class="pill-ok">Approved</span></small></span><b>€85.00</b></div>
         <div class="txn"><span class="t-ico"><i data-lucide="train-front"></i></span><span>SNCB monthly pass<small>Monday <span class="pill-ok">Approved</span></small></span><b>€49.00</b></div>
         <div class="txn"><span class="t-ico"><i data-lucide="car-front"></i></span><span>Cambio car sharing<small>Last week <span class="pill-ok">Approved</span></small></span><b>€32.50</b></div>
         <div class="txn"><span class="t-ico"><i data-lucide="house"></i></span><span>Housing costs<small>Monthly <span class="pill-ok">Approved</span></small></span><b>€682.31</b></div>
-      </div>
       </div>
     </div>
   </div>
