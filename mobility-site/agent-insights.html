@@ -62,6 +62,8 @@
   .burger svg{width:26px;height:26px}
   .nav-drop.wide{min-width:640px}
   .drop-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+  .drop-cols{display:grid;grid-template-columns:1fr 1fr;gap:8px 32px}
+  .drop-label{display:block;font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--n600);padding:10px 14px 6px}
   .nav-drop a{position:relative;padding-right:38px}
   .nav-drop a:hover .drop-ico{background:var(--p400);color:#fff}
   .drop-ico{transition:background .18s ease,color .18s ease}
@@ -71,6 +73,7 @@
   @media(max-width:1100px){
     .nav-drop.wide{min-width:0}
     .drop-grid{display:block}
+    .drop-cols{display:block}
     .nav-drop a{padding-right:14px}
     .nav-drop a::after{display:none}
   }
@@ -205,43 +208,45 @@
     <div class="nav-links" id="navLinks">
       <a href="index.html">Home</a>
       <div class="nav-item">
-        <button class="nav-link nav-parent" aria-expanded="false" aria-haspopup="true">User experiences <i data-lucide="chevron-down" class="chev"></i></button>
-        <div class="nav-drop">
-          <a href="my-mobility-program.html">
-            <span class="drop-ico"><i data-lucide="route"></i></span>
-            <span><strong>My mobility program</strong><small>Budgets, providers and expenses in one app</small></span>
-          </a>
-          <a href="my-payment-methods.html">
-            <span class="drop-ico"><i data-lucide="credit-card"></i></span>
-            <span><strong>My payment methods</strong><small>Skipr card, reimbursements and the app</small></span>
-          </a>
-        </div>
-      </div>
-      <div class="nav-item">
-        <button class="nav-link nav-parent" aria-expanded="false" aria-haspopup="true">Admin experiences <i data-lucide="chevron-down" class="chev"></i></button>
+        <button class="nav-link nav-parent" aria-expanded="false" aria-haspopup="true">Experiences <i data-lucide="chevron-down" class="chev"></i></button>
         <div class="nav-drop wide">
-          <div class="drop-grid">
-          <a href="custom-mobility-programs.html">
-            <span class="drop-ico"><i data-lucide="sliders-horizontal"></i></span>
-            <span><strong>Custom mobility programs</strong><small>Budgets per group, under your policy</small></span>
-          </a>
-          <a href="payroll-reporting.html">
-            <span class="drop-ico"><i data-lucide="receipt"></i></span>
-            <span><strong>Payroll and reporting</strong><small>One-click reports, secure wallet</small></span>
-          </a>
-          <a href="specific-integrations.html">
-            <span class="drop-ico"><i data-lucide="cable"></i></span>
-            <span><strong>Specific integrations</strong><small>SSO, API and HRIS sync</small></span>
-          </a>
-          <a href="guidance-and-support.html">
-            <span class="drop-ico"><i data-lucide="headphones"></i></span>
-            <span><strong>Guidance and support</strong><small>Onboarding to ongoing success</small></span>
-          </a>
+          <div class="drop-cols">
+            <div class="drop-col">
+              <span class="drop-label">For users</span>
+              <a href="my-mobility-program.html">
+                <span class="drop-ico"><i data-lucide="route"></i></span>
+                <span><strong>My mobility program</strong><small>Budgets, providers and expenses in one app</small></span>
+              </a>
+              <a href="my-payment-methods.html">
+                <span class="drop-ico"><i data-lucide="credit-card"></i></span>
+                <span><strong>My payment methods</strong><small>Skipr card, reimbursements and the app</small></span>
+              </a>
+            </div>
+            <div class="drop-col">
+              <span class="drop-label">For admins</span>
+              <a href="custom-mobility-programs.html">
+                <span class="drop-ico"><i data-lucide="sliders-horizontal"></i></span>
+                <span><strong>Custom mobility programs</strong><small>Budgets per group, under your policy</small></span>
+              </a>
+              <a href="payroll-reporting.html">
+                <span class="drop-ico"><i data-lucide="receipt"></i></span>
+                <span><strong>Payroll and reporting</strong><small>One-click reports, secure wallet</small></span>
+              </a>
+              <a href="specific-integrations.html">
+                <span class="drop-ico"><i data-lucide="cable"></i></span>
+                <span><strong>Specific integrations</strong><small>SSO, API and HRIS sync</small></span>
+              </a>
+              <a href="guidance-and-support.html">
+                <span class="drop-ico"><i data-lucide="headphones"></i></span>
+                <span><strong>Guidance and support</strong><small>Onboarding to ongoing success</small></span>
+              </a>
+            </div>
           </div>
         </div>
       </div>
       <a href="skipr-mobility-budget.html">Federal mobility budget</a>
       <a href="agent-insights.html">Agent insights</a>
+      <a href="https://www.pluxee.be/fr/produits/entreprises/pluxee-mobility/" target="_blank" rel="noopener">Pluxee Mobility</a>
       <a href="https://skiprnext.zendesk.com/hc/en-us" target="_blank" rel="noopener">Help center</a>
     </div>
     <div class="nav-cta">
