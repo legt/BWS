@@ -17,13 +17,13 @@
   }
   *{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth}
-  body{font-family:var(--font);background:var(--n50);color:var(--n900);line-height:1.6;-webkit-font-smoothing:antialiased}
+  body{font-family:var(--font);background:var(--n50);color:var(--n900);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
   h1,h2{font-family:'Archivo Black',sans-serif;font-weight:400;line-height:1.15;letter-spacing:-.01em}
   h3,h4{font-family:var(--font);font-weight:600;line-height:1.3;letter-spacing:-.01em}
   ::selection{background:var(--p200)}
   a:focus-visible,button:focus-visible{outline:2px solid var(--p400);outline-offset:3px;border-radius:6px}
   .wrap{max-width:1180px;margin:0 auto;padding:0 24px}
-  section{padding:88px 0}
+  section{padding:88px 0;scroll-margin-top:82px}
   .eyebrow{display:inline-block;font-weight:600;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--n600);margin-bottom:20px}
   h2.section-title{font-size:clamp(30px,4vw,46px);max-width:720px}
   .section-sub{color:var(--n600);font-size:18px;max-width:680px;margin-top:14px}
@@ -157,7 +157,7 @@
   .v-card ul li{padding:6px 0 6px 26px;position:relative}
   .v-card ul li::before{content:"✓";position:absolute;left:2px;font-weight:600;color:var(--p300)}
 
-  #faq{background:var(--n50);border-bottom:1px solid var(--n300)}
+  #faq{background:linear-gradient(180deg,#F8F8FC 0%,#F2F0FC 100%);border-bottom:1px solid var(--n300)}
   .faq-list{margin-top:36px;max-width:860px}
   .faq-item{border:1px solid var(--n300);border-radius:16px;margin-bottom:12px;overflow:hidden;background:#fff}
   .faq-q{width:100%;background:none;border:none;display:flex;gap:20px;align-items:center;padding:20px 24px;cursor:pointer;text-align:left;font-weight:600;font-size:16.5px;color:var(--n900);font-family:var(--font)}
