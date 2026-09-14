@@ -1,0 +1,6 @@
+lucide.createIcons();
+document.getElementById('burger').addEventListener('click',function(){var nav=document.getElementById('navLinks');var open=nav.classList.toggle('open');this.setAttribute('aria-expanded',open?'true':'false')});
+document.querySelectorAll('.nav-parent').forEach(function(btn){btn.addEventListener('click',function(){var item=btn.closest('.nav-item');var open=item.classList.toggle('open');btn.setAttribute('aria-expanded',open?'true':'false')})});
+function filterPolicies(language){document.querySelectorAll('.language-switch button').forEach(function(item){item.classList.toggle('active',item.dataset.language===language)});document.querySelectorAll('.policy-index a[data-language]').forEach(function(item){item.classList.toggle('is-hidden',item.dataset.language!==language)});document.querySelectorAll('.policy-doc[data-language]').forEach(function(item){var dl=item.dataset.language;item.classList.toggle('is-hidden',dl!==language&&dl!=='all')})}
+document.querySelectorAll('.language-switch button').forEach(function(button){button.addEventListener('click',function(){filterPolicies(button.dataset.language)})});
+if(document.querySelector('.language-switch')){filterPolicies('en')}
