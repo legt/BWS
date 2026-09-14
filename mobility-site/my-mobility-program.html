@@ -110,7 +110,7 @@
 
   .visual{position:relative;display:flex;justify-content:center}
   .visual::before{content:"";position:absolute;inset:-40px;background:radial-gradient(45% 45% at 50% 40%,rgba(164,152,236,.3),transparent 70%);pointer-events:none}
-  .phone-mock{position:relative;width:300px;background:#fff;border:1px solid var(--n300);border-radius:34px;box-shadow:var(--shadow);padding:20px;z-index:1}
+  .phone-mock{position:relative;width:300px;border:1px solid transparent;background:linear-gradient(#fff,#fff) padding-box,linear-gradient(90deg,rgba(51,135,248,.4) 0%,rgba(211,82,195,.4) 35%,rgba(249,51,99,.4) 69%,rgba(255,117,26,.4) 100%) border-box;border-radius:34px;box-shadow:0 0 0 4px rgba(208,202,244,.30);padding:20px;z-index:1}
   .phone-mock .notch{width:110px;height:20px;background:var(--n900);border-radius:0 0 12px 12px;margin:-20px auto 14px}
   .pm-app{font-size:12px;font-weight:600;color:var(--p500);letter-spacing:.06em;text-transform:uppercase}
   .pm-bal{font-size:32px;font-weight:700;letter-spacing:-.02em;margin-top:2px}
@@ -154,7 +154,8 @@
   .check-list .ci svg{width:19px;height:19px}
   .check-list strong{display:block;font-size:15.5px}
   .check-list p{font-size:14px;color:var(--n600)}
-  .mini-panel{background:var(--n50);border:1px solid var(--n300);border-radius:24px;padding:30px;box-shadow:var(--shadow)}
+  .mini-panel{border:1px solid transparent;background:linear-gradient(#fff,#fff) padding-box,linear-gradient(90deg,rgba(51,135,248,.4) 0%,rgba(211,82,195,.4) 35%,rgba(249,51,99,.4) 69%,rgba(255,117,26,.4) 100%) border-box;border-radius:24px;padding:30px;box-shadow:0 0 0 4px rgba(208,202,244,.30)}
+  .mini-panel h3{padding-bottom:16px}
   .mini-panel h4{font-size:17px;margin-bottom:14px}
   .txn{display:flex;align-items:center;gap:12px;background:#fff;border:1px solid var(--n300);border-radius:14px;padding:13px 15px;margin-bottom:10px;font-size:14px}
   .txn .t-ico{width:36px;height:36px;border-radius:11px;background:var(--p100);color:var(--p500);display:flex;align-items:center;justify-content:center;flex-shrink:0}
@@ -164,7 +165,7 @@
   .pill-ok{font-size:11px;font-weight:600;color:var(--p500);background:var(--p100);border-radius:100px;padding:3px 10px;margin-left:8px;white-space:nowrap}
 
   .chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
-  .chips span{font-size:14px;font-weight:500;background:#fff;border:1px solid var(--n300);padding:9px 18px;border-radius:100px}
+  .chips span{font-size:14px;font-weight:500;border:1px solid transparent;background:linear-gradient(#fff,#fff) padding-box,linear-gradient(90deg,rgba(51,135,248,.4) 0%,rgba(211,82,195,.4) 35%,rgba(249,51,99,.4) 69%,rgba(255,117,26,.4) 100%) border-box;padding:9px 18px;border-radius:100px;box-shadow:0 0 0 4px rgba(208,202,244,.30)}
   .callout{margin-top:26px;border-radius:var(--radius);padding:26px 30px;display:flex;gap:18px;align-items:flex-start;background:var(--n900);color:#fff}
   .callout .ico{font-size:28px;line-height:1.2}
   .callout .ico svg{width:1em;height:1em}

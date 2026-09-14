@@ -108,9 +108,9 @@
   .stars{display:inline-flex;gap:3px;align-items:center}
   .star-f{width:16px;height:16px;fill:var(--p400);color:var(--p400)}
 
-  .visual{position:relative}
+  .visual{position:relative;border:1px solid transparent;background:linear-gradient(#fff,#fff) padding-box,linear-gradient(90deg,rgba(51,135,248,.4) 0%,rgba(211,82,195,.4) 35%,rgba(249,51,99,.4) 69%,rgba(255,117,26,.4) 100%) border-box;border-radius:22px;box-shadow:0 0 0 4px rgba(208,202,244,.30);padding:0;overflow:hidden}
   .visual::before{content:"";position:absolute;inset:-30px;background:radial-gradient(50% 50% at 50% 45%,rgba(164,152,236,.32),transparent 70%);pointer-events:none}
-  .card-img{position:relative;z-index:1;width:100%;max-width:440px;height:auto;display:block;margin:0 auto;filter:drop-shadow(0 30px 50px rgba(23,25,36,.22))}
+  .card-img{position:relative;z-index:1;width:100%;max-width:440px;height:auto;display:block;margin:0 auto}
 
   .logos{padding:34px 0;border-top:1px solid var(--n300);border-bottom:1px solid var(--n300);background:var(--n50)}
   .logos p{text-align:center;font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--n600);margin-bottom:18px}
@@ -154,7 +154,7 @@
   .feat h4{font-size:16.5px;margin-bottom:6px}
   .feat p{font-size:14px;color:var(--n600)}
   .chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
-  .chips span{font-size:14px;font-weight:500;background:var(--n50);border:1px solid var(--n300);padding:9px 18px;border-radius:100px}
+  .chips span{font-size:14px;font-weight:500;border:1px solid transparent;background:linear-gradient(#fff,#fff) padding-box,linear-gradient(90deg,rgba(51,135,248,.4) 0%,rgba(211,82,195,.4) 35%,rgba(249,51,99,.4) 69%,rgba(255,117,26,.4) 100%) border-box;padding:9px 18px;border-radius:100px;box-shadow:0 0 0 4px rgba(208,202,244,.30)}
 
   #faq{background:linear-gradient(180deg,#F8F8FC 0%,#F2F0FC 100%);border-bottom:1px solid var(--n300)}
   .faq-list{margin-top:36px;max-width:860px}
