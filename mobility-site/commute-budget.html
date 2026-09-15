@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Federal Mobility Budget Belgium: 2027 Guide | Skipr</title>
-<meta name="description" content="The mobility budget becomes mandatory in Belgium in 2027. Learn the 3 pillars, TCO calculation and deadlines, and roll it out with Skipr, zero admin.">
+<title>Flexible Commuting Budget for Home-Work Travel | Skipr</title>
+<meta name="description" content="Give every employee a flexible commuting budget for home-work travel. Flexible, sustainable and smart, with subscriptions managed and one centralised view on mobility expenses.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -53,12 +53,6 @@
   .btn-accent:hover{box-shadow:0 12px 28px -10px rgba(73,24,182,.55)}
   .btn-ghost{background:transparent;color:var(--p400);border:2px solid var(--p400)}
   .btn-white{background:#fff;color:var(--n900)}
-
-  /* ---------- urgency bar ---------- */
-  .urgency{background:var(--n900);color:#fff;font-size:14px;font-weight:500}
-  .urgency .wrap{display:flex;align-items:center;justify-content:center;gap:14px;padding-top:10px;padding-bottom:10px;flex-wrap:wrap}
-  .urgency .dot{width:8px;height:8px;border-radius:50%;background:var(--p300);flex-shrink:0}
-  #countdown{font-weight:600;color:var(--p300);font-variant-numeric:tabular-nums;letter-spacing:.02em}
 
   /* ---------- nav ---------- */
   header{position:sticky;top:0;z-index:100;background:rgba(248,248,252,.9);backdrop-filter:blur(12px);border-bottom:1px solid var(--n300)}
@@ -366,6 +360,51 @@
   .faq-a>p{overflow:hidden}
   .faq-a p{padding:0 24px 22px 74px;color:var(--n800);font-size:15.5px}
 
+  /* ---------- commute ---------- */
+  .elig-card .emp-list{grid-template-columns:1fr 1fr;margin-top:16px}
+  .emp-strip .emp-list,.callout .emp-list{grid-template-columns:1fr 1fr}
+  @media(max-width:640px){.emp-strip .emp-list,.callout .emp-list{grid-template-columns:1fr}}
+  .emp-list.no li::before{content:"×";color:var(--n600)}
+  .vs-tag{display:inline-block;font-weight:600;font-size:13px;padding:8px 22px;border-radius:100px;margin-bottom:14px}
+  .vs-tag.y{background:#FFF1C4;color:#5B4A00}
+  .vs-tag.t{background:#FFDD33;color:var(--n900)}
+  .callout{background:#FFF6D9;border:1px solid #EDDA7A;border-radius:var(--radius);padding:36px;margin-top:40px}
+  .callout h3{font-size:24px}
+  .callout .sub{color:var(--n800);margin:6px 0 18px}
+  .feat .fi svg{width:30px;height:30px}
+  #difference{background:#fff}
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;margin-top:8px}
+  @media(max-width:900px){.split{grid-template-columns:1fr}}
+  .check-list{list-style:none;margin-top:24px;display:grid;gap:16px}
+  .check-list li{display:flex;gap:14px;align-items:flex-start;background:var(--n50);border:1px solid var(--n300);border-radius:16px;padding:18px 20px}
+  .check-list .ci{width:40px;height:40px;border-radius:12px;background:var(--p100);color:var(--p500);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+  .check-list .ci svg{width:19px;height:19px}
+  .check-list strong{display:block;font-size:15.5px}
+  .check-list p{font-size:14px;color:var(--n600)}
+  #why .check-list li{background:none;border:none;padding:0}
+  .mini-panel{border:1px solid transparent;background:linear-gradient(#fff,#fff) padding-box,linear-gradient(90deg,rgba(51,135,248,.4) 0%,rgba(211,82,195,.4) 35%,rgba(249,51,99,.4) 69%,rgba(255,117,26,.4) 100%) border-box;border-radius:24px;padding:30px;box-shadow:0 0 0 4px rgba(208,202,244,.30)}
+  .mini-panel h3{padding-bottom:16px}
+  .txn{display:flex;align-items:center;gap:12px;background:#fff;border:1px solid var(--n300);border-radius:14px;padding:13px 15px;margin-bottom:10px;font-size:14px}
+  .txn .t-ico{width:36px;height:36px;border-radius:11px;background:var(--p100);color:var(--p500);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+  .txn .t-ico svg{width:18px;height:18px}
+  .txn small{display:block;color:var(--n600);font-size:12px}
+  .txn b{margin-left:auto;font-variant-numeric:tabular-nums}
+  .chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+  .chips span{font-size:14px;font-weight:500;border:1px solid transparent;background:linear-gradient(#fff,#fff) padding-box,linear-gradient(90deg,rgba(51,135,248,.4) 0%,rgba(211,82,195,.4) 35%,rgba(249,51,99,.4) 69%,rgba(255,117,26,.4) 100%) border-box;padding:9px 18px;border-radius:100px;box-shadow:0 0 0 4px rgba(208,202,244,.30)}
+  .commute-visual{border:1px solid transparent;background:linear-gradient(#fff,#fff) padding-box,linear-gradient(90deg,rgba(51,135,248,.4) 0%,rgba(211,82,195,.4) 35%,rgba(249,51,99,.4) 69%,rgba(255,117,26,.4) 100%) border-box;border-radius:24px;padding:24px;box-shadow:0 0 0 4px rgba(208,202,244,.30);position:relative;overflow:hidden}
+  .cv-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:28px;position:relative;z-index:1}.cv-top span{font-size:13px;color:var(--n600)}.cv-top strong{font-size:15px}
+  .cv-balance{background:var(--n100);color:var(--n900);border-radius:16px;padding:22px;position:relative;z-index:1}.cv-balance small{display:block;color:var(--n600);font-size:12px;margin-bottom:6px}.cv-balance b{font-size:34px;letter-spacing:-.03em}.cv-balance em{font-size:13px;color:var(--p400);font-style:normal;margin-left:8px}
+  .cv-bar{height:8px;background:rgba(23,25,36,.1);border-radius:10px;margin-top:18px;overflow:hidden}.cv-bar i{display:block;width:64%;height:100%;background:var(--p400);border-radius:10px}
+  .cv-options{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:14px;position:relative;z-index:1}.cv-option{background:#fff;border:1px solid var(--n300);border-radius:12px;padding:12px 10px;font-size:12px;color:var(--n800)}.cv-option svg{display:block;color:var(--p400);margin-bottom:6px;width:18px;height:18px}
+  .commute-journey{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:30px 0 36px}.commute-journey .mode{display:flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--n300);border-radius:12px;padding:12px 16px;color:var(--n800);font-weight:600}.commute-journey .mode svg{color:var(--p400);width:21px}.commute-journey .plus{color:var(--p400);font-size:20px;font-weight:600}
+  .cards3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:40px}
+  .cards3 .ci{width:52px;height:52px;border-radius:16px;background:var(--p100);color:var(--p500);display:flex;align-items:center;justify-content:center;margin-bottom:18px}
+  .benefit-card{padding:30px;border-radius:var(--radius);min-height:210px}.benefit-card h3{font-size:22px;margin:18px 0 8px}.benefit-card p{font-size:15px;color:var(--n800)}.benefit-card .ci{width:44px;height:44px}
+  .benefit-card:nth-child(1){background:var(--n100)}.benefit-card:nth-child(2){background:var(--p400);color:#fff}.benefit-card:nth-child(2) p{color:#fff}.benefit-card:nth-child(3){background:var(--p100)}
+  .commute-note{margin-top:24px;padding:20px 24px;border-left:4px solid var(--p400);background:#fff;border-radius:0 14px 14px 0;color:var(--n800)}
+  @media(max-width:900px){.cards3{grid-template-columns:1fr}}
+  @media(max-width:640px){.cv-options{grid-template-columns:1fr 1fr}.commute-journey{align-items:stretch}.commute-journey .mode{flex:1}}
+
   /* ---------- final CTA ---------- */
   .final-cta{background:radial-gradient(1000px 500px at 50% -10%,var(--p600),var(--n900));color:#fff;text-align:center;padding:110px 0}
   .final-cta h2{font-size:clamp(32px,4.6vw,54px);max-width:720px;margin:0 auto}
@@ -395,13 +434,6 @@
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
-
-<div class="urgency">
-  <div class="wrap">
-    <span class="dot"></span>
-    <span>Mandatory from 1 January 2027 for 50+ employee companies &nbsp;·&nbsp; <span id="countdown">-- days</span> left</span>
-  </div>
-</div>
 
 <header>
   <nav class="wrap">
@@ -461,7 +493,7 @@
             <span class="drop-ico"><i data-lucide="landmark"></i></span>
             <span><strong>Federal mobility budget</strong><small>Exchange company cars for flexible budgets</small></span>
           </a>
-          <a href="commute-budget.html">
+          <a href="commute-budget.html" class="active">
             <span class="drop-ico"><i data-lucide="bike"></i></span>
             <span><strong>Commute budget</strong><small>Flexible budget for home-work travel</small></span>
           </a>
@@ -483,304 +515,82 @@
 <section class="hero">
   <div class="wrap hero-grid">
     <div>
-      <h1>The Federal Mobility Budget, <span class="hl">without the admin headache</span></h1>
-      <p class="lead">The mobility budget is set to become mandatory from <strong>1 January 2027</strong> for companies with 50+ employees that offer company cars. Skipr gives you everything you need to roll it out, management platform, mobile app and payment card, all in one place.</p>
+      <span class="eyebrow">Budgets</span>
+      <h1>Flexible <span class="hl">commuting budget</span></h1>
+      <p class="lead">A mobility solution for all your employees. One flexible budget for home-work travel, flexible, sustainable and smart, with zero administrative hassle.</p>
       <div class="hero-ctas"><a class="btn btn-primary" href="https://tally.so/r/w41pDd">Book a demo →</a></div>
     </div>
-    <div class="browser reveal">
-      <div class="browser-bar"><i></i><i></i><i></i><span class="browser-url">app.skipr.co/overview</span></div>
-      <div class="browser-body">
-        <div class="dash-head"><h3>Federal Mobility Budget</h3></div>
-        <div class="dash-total">€12,000 <small>/ year</small></div>
-        <div class="pillar-row">
-          <div class="pr-top"><span>Pillar 1 · Green car</span><span>€7,000</span></div>
-          <div class="bar bar-p1"><i></i></div>
-        </div>
-        <div class="pillar-row">
-          <div class="pr-top"><span>Pillar 2 · Mobility &amp; housing</span><span>€4,000</span></div>
-          <div class="bar bar-p2"><i></i></div>
-        </div>
-        <div class="pillar-row">
-          <div class="pr-top"><span>Pillar 3 · Cash</span><span>€619.30</span></div>
-          <div class="bar bar-p3"><i></i></div>
-        </div>
-        <div class="dash-tags"><span>Bike</span><span>SNCB</span><span>Housing</span><span>Cash-out</span></div>
+    <div class="reveal">
+      <div class="commute-visual">
+        <div class="cv-top"><strong>Commute budget</strong><span>Home → work</span></div>
+        <div class="cv-balance"><small>Available this month</small><b>€420</b><em>flexible</em><div class="cv-bar"><i></i></div></div>
+        <div class="cv-options"><div class="cv-option"><i data-lucide="train-front"></i>Public transport</div><div class="cv-option"><i data-lucide="bike"></i>Bike</div><div class="cv-option"><i data-lucide="car-front"></i>Shared car</div></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============ LOGOS ============ -->
-<div class="logos">
+<!-- ============ DIFFERENCE ============ -->
+<section id="difference">
   <div class="wrap">
-    <p>Trusted by 200+ companies to manage their corporate mobility</p>
-    <div class="logo-row"><img src="logos/carrefour.svg" alt="Carrefour"><img src="logos/accenture.svg" alt="Accenture"><img src="logos/luminus.svg" alt="Luminus"><img src="logos/ptc.png" alt="Positive Thinking Company"><img src="logos/pluxee.svg" alt="Pluxee Group"></div>
-  </div>
-</div>
-
-<!-- ============ WHAT + DEADLINE ============ -->
-<section id="what">
-  <div class="wrap">
-    <span class="eyebrow">What is it?</span>
-    <h2 class="section-title">Exchange the company car for a flexible, tax-free budget</h2>
-    <p class="section-sub">The federal mobility budget lets employees swap their company car, or their right to one, for a budget equal to the car's <strong>Total Cost of Ownership</strong>. Bikes, public transport, shared mobility, housing, even cash: they spend it on the mobility that fits their life. For you, the switch is <strong>cost-neutral</strong>.</p>
-    <div class="callout navy reveal">
-      <div class="ico"><i data-lucide="lightbulb"></i></div>
-      <p><strong>Key fact:</strong> spending under pillars 1 and 2 is exempt from income tax and social contributions, and the switch adds no extra cost for you. It replaces the company car budget you already have.</p>
-    </div>
-    <div class="deadline-grid">
-      <div class="dl-card hot reveal"><div class="date">2027</div><p><strong>From 1 January 2027:</strong> mandatory for employers with <strong>50+ employees</strong> that make company cars available.</p></div>
-      <div class="dl-card reveal"><div class="date">2028</div><p><strong>From 1 January 2028:</strong> mandatory for companies with <strong>15-49 employees</strong>.</p></div>
-      <div class="dl-card reveal"><div class="date">&lt;15</div><p>Companies with <strong>fewer than 15 employees</strong> are currently exempt.</p></div>
-    </div>
-    <div class="legal-note">These dates follow the coalition agreement and are pending final parliamentary approval. Skipr monitors the legislation closely, talk to us and you'll always work with the latest rules.</div>
-  </div>
-</section>
-
-<!-- ============ PILLARS ============ -->
-<section id="pillars">
-  <div class="wrap">
-    <span class="eyebrow teal">The 3 pillars</span>
-    <h2 class="section-title">One budget, three ways to spend it</h2>
-    <p class="section-sub">Your employees get one budget and total freedom to mix the three pillars however they like.</p>
-    <div class="bento">
-      <div class="pillar-card p1 reveal">
-        <div class="pillar-icon"><i data-lucide="car"></i></div>
-        <h3>Pillar 1: A greener car</h3>
-        <p>Keep a company car inside the budget, as long as it meets the legal eco criteria.</p>
-        <ul>
-          <li>Fully electric vehicles (mandatory for cars ordered from 2026)</li>
-          <li>Transitional rules for low-emission cars ordered earlier</li>
-          <li>Same comfort, smaller footprint</li>
-        </ul>
-      </div>
-      <div class="pillar-card p2 reveal">
-        <div class="pillar-icon"><i data-lucide="bike"></i></div>
-        <h3>Pillar 2: Sustainable mobility &amp; housing</h3>
-        <p>The pillar employees love most, tax-free spending on real life.</p>
-        <ul>
-          <li>(E-)bikes, e-steps, cargo bikes + equipment &amp; maintenance</li>
-          <li>Public transport, incl. family subscriptions &amp; intl. trains</li>
-          <li>Shared mobility, car pooling, taxis, 30-day car rental</li>
-          <li>Kilometre allowance for cycling or walking</li>
-          <li><strong>Housing:</strong> rent or mortgage within 10 km of work, or 50%+ WFH</li>
-        </ul>
-      </div>
-      <div class="pillar-card p3 reveal">
-        <div class="pillar-icon"><i data-lucide="banknote"></i></div>
-        <h3>Pillar 3: Cash out</h3>
-        <p>Whatever isn't spent lands on the January payslip, never lost.</p>
-        <ul>
-          <li>Free of income tax</li>
-          <li>Only a 38.07% solidarity contribution deducted</li>
-          <li>Paid automatically, incl. mid-year leavers</li>
-        </ul>
-      </div>
-    </div>
-    <div class="callout yellow reveal">
-      <div class="ico"><i data-lucide="chart-column"></i></div>
-      <p><strong>Did you know?</strong> With an average commute of 37 km, Belgians are among Europe's longest-distance commuters (2025 SD Worx study). No wonder flexible mobility beats a one-size-fits-all car.</p>
-    </div>
-    <h3 style="font-size:22px;margin:40px 0 4px">Housing costs in Skipr, request, validate, reimburse</h3>
-    <p class="section-sub" style="margin-top:6px">Housing is the pillar-2 option employees love most, and the one HR teams fear most. In Skipr it takes three steps, none of them yours:</p>
-    <div class="steps3">
-      <div class="step3 reveal"><div class="n">1</div><h3>Request it</h3><p>A one-time action by the employee, in the app.</p></div>
-      <div class="step3 reveal"><div class="n">2</div><h3>Validate it</h3><p>Handled by the Skipr team.</p></div>
-      <div class="step3 reveal"><div class="n">3</div><h3>Reimburse it</h3><p>A simple drag &amp; drop for your payroll team. Recurring, traceable.</p></div>
-    </div>
-    <div class="callout teal reveal">
-      <div class="ico"><i data-lucide="calculator"></i></div>
-      <p><strong>How the cash-out math works:</strong> €2,000 unspent − 38.07% solidarity contribution = <strong>€1,238.60 net</strong> on the payslip. Still far more attractive than a standard salary increase.</p>
+    <span class="eyebrow">The difference</span>
+    <h2 class="section-title">A better commute, without the admin work</h2>
+    <p class="section-sub">Yesterday meant choosing one option. Today, every employee can combine the mobility that fits their day.</p>
+    <div class="commute-journey reveal"><span class="mode"><i data-lucide="train-front"></i>Train</span><span class="plus">+</span><span class="mode"><i data-lucide="bike"></i>Bike</span><span class="plus">+</span><span class="mode"><i data-lucide="car-front"></i>Shared car</span><span class="plus">+</span><span class="mode"><i data-lucide="more-horizontal"></i>More</span></div>
+    <div class="cards3">
+      <div class="benefit-card reveal"><div class="ci"><i data-lucide="settings-2"></i></div><h3>Less work for HR</h3><p>Automated processes replace manual receipts, reimbursements and scattered reporting.</p></div>
+      <div class="benefit-card reveal"><div class="ci"><i data-lucide="sliders-horizontal"></i></div><h3>More choice for employee</h3><p>Offer public transport, bikes, shared mobility and allowances in one flexible budget.</p></div>
+      <div class="benefit-card reveal"><div class="ci"><i data-lucide="chart-no-axes-combined"></i></div><h3>One clear view</h3><p>Track mobility spend centrally, control costs and see which options employees use.</p></div>
     </div>
   </div>
 </section>
 
-<!-- ============ WORKED EXAMPLES ============ -->
-<section id="examples">
-  <div class="wrap">
-    <span class="eyebrow">Worked examples</span>
-    <h2 class="section-title">What does it look like in practice?</h2>
-    <p class="section-sub">Same employee, same €12,000 company-car budget, two completely different ways to spend it.</p>
-    <div class="examples">
-      <div class="ex-card reveal">
-        <div class="ex-head"><h3>Example 1, keeps a greener car</h3><p>For the driver who still wants wheels</p></div>
-        <div class="ex-body">
-          <div class="ex-line"><span>Electric company car <span class="tag t1">Pillar 1</span></span><span class="amt">€7,000</span></div>
-          <div class="ex-line"><span>Mobility &amp; housing, tax-free <span class="tag t2">Pillar 2</span></span><span class="amt">€4,000</span></div>
-          <div class="ex-line"><span>Cash on payslip <span class="tag t3">Pillar 3</span></span><span class="amt">€619.30</span></div>
-          <div class="ex-net">€1,000 unspent − 38.07% = <strong>€619.30 net</strong></div>
-        </div>
-      </div>
-      <div class="ex-card reveal">
-        <div class="ex-head"><h3>Example 2, goes car-free</h3><p>For the city dweller or remote worker</p></div>
-        <div class="ex-body">
-          <div class="ex-line"><span>Green company car <span class="tag t1">Pillar 1</span></span><span class="amt">€0</span></div>
-          <div class="ex-line"><span>Mobility &amp; housing, tax-free <span class="tag t2">Pillar 2</span></span><span class="amt">€10,000</span></div>
-          <div class="ex-line"><span>Cash on payslip <span class="tag t3">Pillar 3</span></span><span class="amt">€1,238.60</span></div>
-          <div class="ex-net">€2,000 unspent − 38.07% = <strong>€1,238.60 net</strong></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ NUMBERS / TIMELINE ============ -->
-<section id="numbers">
-  <div class="wrap">
-    <span class="eyebrow">Why now</span>
-    <h2 class="section-title">From niche perk to national standard</h2>
-    <p class="section-sub">Adoption grew nearly 10× in four years, and the mandate hasn't even kicked in.</p>
-    <div class="timeline">
-      <div class="tl-item reveal"><span class="tl-dot"></span><div class="tl-year">2019</div><p>The law is introduced (17 Sept 2019) with one ambition: cut traffic congestion and pollution.</p></div>
-      <div class="tl-item reveal"><span class="tl-dot"></span><div class="tl-year">2021 <span class="stat">2,359 onboarded</span></div><p>Early adopters switch their first fleets to flexible budgets.</p></div>
-      <div class="tl-item reveal"><span class="tl-dot"></span><div class="tl-year">2022 <span class="stat">5,186 onboarded</span></div><p>First renewal: housing radius widened, mortgage capital + interest included.</p></div>
-      <div class="tl-item reveal"><span class="tl-dot"></span><div class="tl-year">2023 <span class="stat">10,250 onboarded</span></div><p>Adoption doubles year over year.</p></div>
-      <div class="tl-item reveal"><span class="tl-dot"></span><div class="tl-year">2024 <span class="stat">18,386 onboarded</span></div><p>Second renewal: official TCO formulas, geographic expansion to the EEA.</p></div>
-      <div class="tl-item reveal"><span class="tl-dot"></span><div class="tl-year">2025 <span class="stat">22,618 onboarded</span></div><p>Government agreement signals strong commitment to the budget.</p></div>
-      <div class="tl-item now reveal"><span class="tl-dot"></span><div class="tl-year">2026, you are here</div><p>Preparation for mass adoption. Design your policy calmly, while there's still time.</p></div>
-      <div class="tl-item future reveal"><span class="tl-dot"></span><div class="tl-year">2027 <span class="stat">Obligation · 50+ employees</span></div><p>The mandate kicks in for larger employers.</p></div>
-      <div class="tl-item future reveal"><span class="tl-dot"></span><div class="tl-year">2028 <span class="stat">Obligation · 15+ employees</span></div><p>Mid-size companies follow a year later.</p></div>
-    </div>
-    <p style="margin-top:28px;font-size:13px;color:var(--n500)">Sources: RSZ &amp; Acerta (adoption figures).</p>
-  </div>
-</section>
-
-<!-- ============ ELIGIBILITY ============ -->
-<section id="eligibility">
-  <div class="wrap">
-    <span class="eyebrow">Eligibility</span>
-    <h2 class="section-title">Are you and your employees eligible?</h2>
-    <div class="elig-grid">
-      <div class="elig-card reveal"><div class="big"><i data-lucide="building-2"></i></div><h3>For employers</h3><p>Your company must have made <strong>one or more company cars</strong> available to at least one employee for an uninterrupted period of <strong>at least 36 months</strong>. Younger companies qualify as soon as the first car is allocated, "companies in difficulty" are exempt.</p></div>
-      <div class="elig-card reveal"><div class="big"><i data-lucide="briefcase"></i></div><h3>For employees</h3><p>Anyone who <strong>has a company car, or is entitled to one</strong> under your car policy, can opt in. The old waiting period is abolished, eligible employees switch immediately.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ TCO ============ -->
-<section id="calc">
-  <div class="wrap">
-    <span class="eyebrow yellow">Calculation</span>
-    <h2 class="section-title">How much budget? It starts with the TCO</h2>
-    <p class="section-sub">The budget equals the <strong>Total Cost of Ownership</strong> of the company car, lease or purchase, fuel, insurance, maintenance, taxes, depreciation, via the actual-costs or flat-rate formula, applied consistently company-wide.</p>
-    <div class="rules">
-      <div class="rule r1 reveal"><div class="frac">⅕</div><h3>The 1/5 rule</h3><p>A mobility budget can never exceed <strong>20% of the employee's gross annual salary</strong>. This is the hard cap on every budget.</p></div>
-      <div class="rule r2 reveal"><div class="frac"><i data-lucide="ruler"></i></div><h3>The legal minimum</h3><p>The budget can't fall below the indexed statutory minimum, adjusted every year. Skipr's TCO calculator does the math for you, no spreadsheets, no guesswork.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ BENEFITS ============ -->
-<section id="benefits">
-  <div class="wrap">
-    <span class="eyebrow">Why it's worth it</span>
-    <h2 class="section-title">A boost for your company, and your people</h2>
-    <div class="benefit-grid">
-      <div class="b-card b1 reveal"><div class="bi"><i data-lucide="piggy-bank"></i></div><h3>Use the fiscal framework to your advantage</h3><p>Cost-neutral switch. Same spend, better tax treatment.</p><div class="pill"><span>Cost neutrality</span></div></div>
-      <div class="b-card b2 reveal"><div class="bi"><i data-lucide="handshake"></i></div><h3>Align benefits with real needs</h3><p>Win-win: employees choose what fits, you stop paying for idle cars.</p><div class="pill"><span>Win-win</span></div></div>
-      <div class="b-card b3 reveal"><div class="bi"><i data-lucide="magnet"></i></div><h3>Keep your most talented people</h3><p>Flexible mobility is a top hiring and retention argument.</p><div class="pill"><span>Retention</span></div></div>
-      <div class="b-card b4 reveal"><div class="bi"><i data-lucide="sprout"></i></div><h3>Promote sustainable mobility</h3><p>Cut fleet emissions and feed CO₂ reporting with real data.</p><div class="pill"><span>CO₂ reduction</span></div></div>
-    </div>
-    <div class="emp-strip reveal">
-      <h3>For employees</h3>
-      <ul class="emp-list">
-        <li>Tax-free spending on mobility &amp; housing</li>
-        <li>Freedom to choose how they commute</li>
-        <li>Bikes, public transport, shared mobility</li>
-        <li>Cash payout on the January payslip</li>
-        <li>Works for hybrid, remote &amp; office staff</li>
-        <li>No more parking stress</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- ============ PERSONAS ============ -->
-<section id="personas">
-  <div class="wrap">
-    <span class="eyebrow teal">In real life</span>
-    <h2 class="section-title">Three employees, three uses, one platform</h2>
-    <div class="persona-grid">
-      <div class="persona reveal"><div class="avatar">O</div><h3>Olivia</h3><div class="dist">0 to 5 km</div><p>Walks or takes the tram to the office, but wants a car for holidays.</p><div class="p-budget">€850 <small>/ month</small></div>
-        <ul><li>Housing costs <b>€500</b></li><li>Car rental + cash <b>€300</b></li><li>Transport pass <b>€50</b></li></ul></div>
-      <div class="persona reveal"><div class="avatar">A</div><h3>Arthur</h3><div class="dist">15 to 30 km</div><p>Lives outside Brussels, combines bike + train, saves 20 min a day.</p><div class="p-budget">€700 <small>/ month</small></div>
-        <ul><li>Housing costs <b>€450</b></li><li>Car rental + cash <b>€200</b></li><li>Transport pass <b>€50</b></li></ul></div>
-      <div class="persona reveal"><div class="avatar">E</div><h3>Emma</h3><div class="dist">50 to 100 km</div><p>Consultant, home 12 days a month, travels to client sites.</p><div class="p-budget">€600 <small>/ month</small></div>
-        <ul><li>Housing costs <b>€150</b></li><li>Car rental + cash <b>€50</b></li><li>Transport pass <b>€400</b></li></ul></div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ 5 STEPS ============ -->
-<section id="steps">
-  <div class="wrap">
-    <span class="eyebrow">Get started</span>
-    <h2 class="section-title">From zero to compliant in 5 steps</h2>
-    <p class="section-sub">Skipr runs every step with you, guided onboarding, not self-service guesswork. Most SMEs go live in days to a few weeks.</p>
-    <div class="steps5">
-      <div class="step5 reveal"><div class="num">01</div><div><h3>Write your mobility policy</h3><p>Define which options you offer and the rules. Skipr provides the legal document templates.</p></div></div>
-      <div class="step5 reveal"><div class="num">02</div><div><h3>Determine the budget</h3><p>Calculate TCO per employee. Skipr's calculator handles it.</p></div></div>
-      <div class="step5 reveal"><div class="num">03</div><div><h3>Get a written request</h3><p>The law requires a written request before an employee switches.</p></div></div>
-      <div class="step5 reveal"><div class="num">04</div><div><h3>Sign the addendum</h3><p>Formalises the exchange of car for budget.</p></div></div>
-      <div class="step5 reveal"><div class="num">05</div><div><h3>Manage it all in Skipr</h3><p>Employees check balances, book and pay in the app, you approve expenses and report with zero paperwork.</p></div></div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ WHY SKIPR ============ -->
+<!-- ============ COMPANY BENEFITS ============ -->
 <section id="why">
   <div class="wrap">
-    <span class="eyebrow">Why Skipr</span>
-    <h2 class="section-title">The all-in-one mobility solution</h2>
-    <p class="section-sub">Budget calculators only give you a number, and self-serve tools leave you alone with the paperwork. Skipr gives you the full loop: <strong>management platform</strong> for HR, <strong>mobile app</strong> for employees, <strong>payment card</strong> that works everywhere.</p>
-    <div class="compare reveal">
-      <table>
-        <thead><tr><th></th><th>Spreadsheets + manual admin</th><th>Skipr <i data-lucide="check" class="ck-head"></i></th></tr></thead>
-        <tbody>
-          <tr><td>TCO calculation</td><td><span class="x"><i data-lucide="x"></i></span> Manual, error-prone</td><td><span class="check"><i data-lucide="check"></i></span> Built-in, consistent company-wide</td></tr>
-          <tr><td>Policy &amp; legal docs</td><td><span class="x"><i data-lucide="x"></i></span> You draft them</td><td><span class="check"><i data-lucide="check"></i></span> Templates + expert guidance</td></tr>
-          <tr><td>Employee payments</td><td><span class="x"><i data-lucide="x"></i></span> Expense reports</td><td><span class="check"><i data-lucide="check"></i></span> Card + app, automatic</td></tr>
-          <tr><td>Provider coverage</td><td><span class="x"><i data-lucide="x"></i></span> One contract at a time</td><td><span class="check"><i data-lucide="check"></i></span> 100+ providers integrated</td></tr>
-          <tr><td>Invoicing</td><td><span class="x"><i data-lucide="x"></i></span> A pile of invoices</td><td><span class="check"><i data-lucide="check"></i></span> One monthly invoice</td></tr>
-          <tr><td>Payroll &amp; HR sync</td><td><span class="x"><i data-lucide="x"></i></span> Manual exports</td><td><span class="check"><i data-lucide="check"></i></span> Social secretariat + ERP integrations</td></tr>
-          <tr><td>Reporting</td><td><span class="x"><i data-lucide="x"></i></span> Assemble it yourself</td><td><span class="check"><i data-lucide="check"></i></span> CO₂ &amp; tax reports, automatic</td></tr>
-        </tbody>
-      </table>
-    </div>
-    <div class="feat-grid">
-      <div class="feat reveal"><div class="fi"><i data-lucide="target"></i></div><h3>Management platform</h3><p>Budgets, policies and approval flows for federal, flex and commute budgets in one place.</p></div>
-      <div class="feat reveal"><div class="fi"><i data-lucide="puzzle"></i></div><h3>One platform, every budget</h3><p>Run federal, flex, commute and business-travel budgets side by side, per employee group.</p></div>
-      <div class="feat reveal"><div class="fi"><i data-lucide="credit-card"></i></div><h3>Mobility payment card</h3><p>A Mastercard accepted by any mobility provider in Europe, limited to your categories.</p></div>
-      <div class="feat reveal"><div class="fi"><i data-lucide="smartphone"></i></div><h3>Mobile app</h3><p>Balance, trip planning and payment in one intuitive interface.</p></div>
-      <div class="feat reveal"><div class="fi"><i data-lucide="network"></i></div><h3>100+ mobility providers</h3><p>Bikes, train, car-sharing, e-steps, parking, EV charging, integrated out of the box.</p></div>
-      <div class="feat reveal"><div class="fi"><i data-lucide="receipt"></i></div><h3>One single invoice</h3><p>No expense reports. One aggregated invoice per month.</p></div>
-      <div class="feat reveal"><div class="fi"><i data-lucide="refresh-cw"></i></div><h3>HR integrations</h3><p>Social secretary, HR ERP and payroll, no manual exports, no double entry.</p></div>
-      <div class="feat reveal"><div class="fi"><i data-lucide="wallet"></i></div><h3>Pillar-3 payroll, handled</h3><p>Year-end report ready by early January, leavers settled automatically with pre-configured pay codes.</p></div>
-      <div class="feat reveal"><div class="fi"><i data-lucide="shield-check"></i></div><h3>Secure &amp; compliant</h3><p>Built to Belgian legal standards, backed by the Pluxee Group.</p></div>
-    </div>
-    <div style="margin-top:32px;display:flex;gap:14px;flex-wrap:wrap">
-      <a class="btn btn-primary" href="https://tally.so/r/w41pDd">Book a demo →</a>
-      <a class="btn btn-ghost" href="https://tally.so/r/w41pDd">Download the free mobility guide</a>
+    <span class="eyebrow">For companies</span>
+    <h2 class="section-title">Company benefits</h2>
+    <p class="section-sub">Reduce administrative workload and control costs.</p>
+    <div class="split">
+      <div><ul class="check-list"><li class="reveal"><span class="ci"><i data-lucide="workflow"></i></span><span><strong>Automated processes</strong><p>Manage subscriptions, receipts and reimbursements without manual follow-up.</p></span></li><li class="reveal"><span class="ci"><i data-lucide="chart-no-axes-combined"></i></span><span><strong>Control costs</strong><p>See the full mobility picture in one centralised view.</p></span></li><li class="reveal"><span class="ci"><i data-lucide="landmark"></i></span><span><strong>VAT-ready reporting</strong><p>Access Belgium&apos;s major mobility providers in the app, covering 90%+ of transactions.</p></span></li></ul></div>
+      <div class="mini-panel reveal"><h3>What HR gets back</h3><div class="txn"><span class="t-ico"><i data-lucide="clock-3"></i></span><span>Time spent on admin<small>Less manual work each month</small></span><b>↓</b></div><div class="txn"><span class="t-ico"><i data-lucide="receipt"></i></span><span>Receipts and reimbursements<small>Processed in one flow</small></span><b>✓</b></div><div class="txn"><span class="t-ico"><i data-lucide="eye"></i></span><span>Mobility visibility<small>One place for every expense</small></span><b>●</b></div></div>
     </div>
   </div>
 </section>
 
-<!-- ============ FAQ ============ -->
-<section id="faq">
+<!-- ============ EMPLOYEE BENEFITS ============ -->
+<section>
   <div class="wrap">
-    <span class="eyebrow yellow">FAQ</span>
-    <h2 class="section-title">No such thing as a bad question</h2>
-    <div class="faq-list">
-      <div class="faq-item"><button class="faq-q"><span class="qn">01</span>Is the mobility budget mandatory?<span class="plus">+</span></button><div class="faq-a"><p>It is set to become mandatory, from 1 Jan 2027 for companies with 50+ employees that offer company cars, and from 1 Jan 2028 for companies with 15-49 employees. Fewer than 15 employees: currently exempt. The final law is still going through parliament, we track it closely.</p></div></div>
-      <div class="faq-item"><button class="faq-q"><span class="qn">02</span>How is the budget amount calculated?<span class="plus">+</span></button><div class="faq-a"><p>It equals the Total Cost of Ownership (TCO) of the employee's company car, lease/purchase, fuel, insurance, maintenance, tax. It can't exceed 1/5 of gross annual salary, nor fall below the indexed legal minimum.</p></div></div>
-      <div class="faq-item"><button class="faq-q"><span class="qn">03</span>What can the budget be spent on?<span class="plus">+</span></button><div class="faq-a"><p>Three pillars: (1) a greener car, fully electric for cars ordered from 2026, (2) bikes, public transport, shared mobility and housing costs, (3) cash on the January payslip (remainder minus a 38.07% solidarity contribution).</p></div></div>
-      <div class="faq-item"><button class="faq-q"><span class="qn">04</span>Do I still need to offer a car?<span class="plus">+</span></button><div class="faq-a"><p>No. You can offer the budget instead of the car. Employees who prefer to keep a car can keep it, the budget is an alternative, not a removal.</p></div></div>
-      <div class="faq-item"><button class="faq-q"><span class="qn">05</span>What housing costs can be paid from the budget?<span class="plus">+</span></button><div class="faq-a"><p>Rent and mortgage (capital + interest) if the employee lives within 10 km of work, or works 50%+ from home. In Skipr, the employee requests it once, we validate it, payroll reimburses it monthly.</p></div></div>
-      <div class="faq-item"><button class="faq-q"><span class="qn">06</span>How does the year-end cash payout reach payroll?<span class="plus">+</span></button><div class="faq-a"><p>Automatically. Unused budget stays available until 31 December, then Skipr generates a dedicated pillar-3 report by early January that uploads straight to your social secretariat, no manual adjustments. Mid-year leavers are settled the same way.</p></div></div>
-      <div class="faq-item"><button class="faq-q"><span class="qn">07</span>Does Skipr integrate with our payroll provider?<span class="plus">+</span></button><div class="faq-a"><p>Yes, with all external payroll companies and internal payroll systems, plus your social secretariat and HR ERP. No manual exports, no double entry.</p></div></div>
-      <div class="faq-item"><button class="faq-q"><span class="qn">08</span>Can Skipr manage other budgets too?<span class="plus">+</span></button><div class="faq-a"><p>Yes, run the federal budget alongside flex plans, commute or business-travel budgets, each with their own rules and employee groups, all in one place.</p></div></div>
-      <div class="faq-item"><button class="faq-q"><span class="qn">09</span>How long does implementation take?<span class="plus">+</span></button><div class="faq-a"><p>Thanks to standard templates, ready-made integrations and guided onboarding, many SMEs go live within days to a few weeks.</p></div></div>
-      <div class="faq-item"><button class="faq-q"><span class="qn">10</span>What happens to allowances like the bike allowance?<span class="plus">+</span></button><div class="faq-a"><p>Depending on your history, existing allowances can stay on top of the budget or be paid out of it. We'll help you structure this correctly with your social secretary.</p></div></div>
+    <span class="eyebrow">For employees</span>
+    <h2 class="section-title">Employee benefits</h2>
+    <p class="section-sub">Flexible, sustainable and smart approach.</p>
+    <div class="chips reveal"><span>Train</span><span>Bike</span><span>Shared car</span><span>Scooter</span><span>Carpooling</span><span>More options</span></div>
+    <div class="commute-note reveal">Give employees a budget they can spend locally and flexibly on their way to the office, while keeping the rules and balance invisible in the background.</div>
+  </div>
+</section>
+
+<!-- ============ OPTIONS ============ -->
+<section id="calc">
+  <div class="wrap">
+    <span class="eyebrow">Included</span>
+    <h2 class="section-title">Standard mobility options allowed in Belgium</h2>
+    <div class="feat-grid">
+      <div class="feat reveal"><div class="fi"><i data-lucide="train-front"></i></div><h4>Public transport</h4><p>NMBS, STIB, De Lijn and TEC (tickets, multi-trip cards, subscriptions)</p></div>
+      <div class="feat reveal"><div class="fi"><i data-lucide="euro"></i></div><h4>Allowances</h4><p>Bike and car allowances</p></div>
+      <div class="feat reveal"><div class="fi"><i data-lucide="bike"></i></div><h4>Bike</h4><p>Shared bikes, company bikes and leasing</p></div>
+      <div class="feat reveal"><div class="fi"><i data-lucide="badge-check"></i></div><h4>Subscription management</h4><p>Manage third-party subscriptions via Move</p></div>
+      <div class="feat reveal"><div class="fi"><i data-lucide="car"></i></div><h4>Sharing economy</h4><p>Shared steps, scooters and cars</p></div>
+    </div>
+    <div class="callout reveal">
+      <h3>Flexible commuting (home-work)</h3>
+      <p class="sub">For employees not eligible to a company car.</p>
+      <ul class="emp-list">
+        <li>Budget to spend <strong>locally and flexibly</strong></li>
+        <li>Budget to <strong>get to the office</strong> (commute expenses only)</li>
+        <li>Unspent budget <strong>never paid out</strong> to the employee</li>
+        <li><strong>Invisible</strong> balance</li>
+        <li><strong>Limited list</strong> of commute-linked mobility services</li>
+      </ul>
     </div>
   </div>
 </section>
@@ -788,8 +598,8 @@
 <!-- ============ FINAL CTA ============ -->
 <section class="final-cta">
   <div class="wrap">
-    <h2>Be ready before the deadline, not after</h2>
-    <p>The companies that start now design their policy calmly. The ones that wait get the January rush.</p>
+    <h2>Ready to build your mobility dream</h2>
+    <p>Grab a virtual coffee with our mobility experts and translate your vision into concrete actions.</p>
     <div class="hero-ctas">
       <a class="btn btn-accent" href="https://tally.so/r/w41pDd">Book a demo →</a>
       <a class="btn btn-white" href="https://tally.so/r/w41pDd">Get the free mobility guide</a>
@@ -803,29 +613,17 @@
   <div class="wrap">
     <div class="foot-grid">
       <div><div class="foot-logo"><img src="skipr-logo.svg" alt="Skipr"></div><p style="margin-top:10px;max-width:280px">The all-in-one solution for managing corporate mobility. Part of the Pluxee Group.</p></div>
-      <div><h5>Solution</h5><a href="skipr-mobility-budget.html">Federal mobility budget</a><a href="commute-budget.html">Commute budget</a><a href="custom-mobility-programs.html">Custom mobility programs</a><a href="payroll-reporting.html">Payroll and reporting</a><a href="specific-integrations.html">Specific integrations</a><a href="guidance-and-support.html">Guidance and support</a><a href="my-mobility-program.html">My mobility program</a><a href="my-payment-methods.html">My payment methods</a><a href="agent-insights.html">Agent insights</a><a href="#faq">FAQ</a></div>
+      <div><h5>Solution</h5><a href="skipr-mobility-budget.html">Federal mobility budget</a><a href="commute-budget.html">Commute budget</a><a href="custom-mobility-programs.html">Custom mobility programs</a><a href="payroll-reporting.html">Payroll and reporting</a><a href="specific-integrations.html">Specific integrations</a><a href="guidance-and-support.html">Guidance and support</a><a href="my-mobility-program.html">My mobility program</a><a href="my-payment-methods.html">My payment methods</a><a href="agent-insights.html">Agent insights</a></div>
       <div><h5>Resources</h5><a href="https://tally.so/r/w41pDd">Free mobility guide</a><a href="https://skiprnext.zendesk.com/hc/en-us" target="_blank" rel="noopener">Help center</a></div>
       <div><h5>Contact</h5><a href="https://tally.so/r/w41pDd">Book a demo</a></div>
     </div>
-    <div class="disclaimer">© 2026 Skipr SA, part of the Pluxee Group. This page is for informational purposes only and does not constitute legal or tax advice. Deadlines depend on legislation still going through parliament, figures and indexation change yearly. Verify current values with your legal advisor before implementation. · <a href="policy-center.html">Policy center</a> · Terms <a href="javascript:void(0)" onclick="_ccOpenSettings();return false;">Cookie settings</a></div>
+    <div class="disclaimer">© 2026 Skipr SA, part of the Pluxee Group. This page is for informational purposes only. · <a href="policy-center.html">Policy center</a> · Terms <a href="javascript:void(0)" onclick="_ccOpenSettings();return false;">Cookie settings</a></div>
   </div>
 </footer>
 
 <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
 <script>
   lucide.createIcons();
-  // Countdown to 1 Jan 2027 (Brussels time)
-  (function(){
-    var target = new Date('2027-01-01T00:00:00+01:00').getTime();
-    var el = document.getElementById('countdown');
-    function tick(){
-      var d = target - Date.now();
-      if(d <= 0){ el.textContent = 'deadline reached'; return; }
-      el.textContent = Math.floor(d/864e5) + ' days';
-    }
-    tick(); setInterval(tick, 60000);
-  })();
-
   // Mobile nav
   document.getElementById('burger').addEventListener('click', function(){
     document.getElementById('navLinks').classList.toggle('open');
